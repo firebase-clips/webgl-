@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07131f">
+<title>Happy Independence Day — 15 August 2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--saffron:#ff9933;--green:#138808;--dark:#07131f}
+html,body{width:100%;height:100%;overflow:hidden;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--dark);color:#fff}
+body{position:relative}
+.app{width:100vw;height:100vh;display:flex;flex-direction:column;overflow:hidden;background:radial-gradient(circle at 50% 8%,rgba(255,153,51,.18),transparent 34%),radial-gradient(circle at 15% 88%,rgba(19,136,8,.16),transparent 30%),#07131f}
+.hero{height:50%;min-height:290px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:linear-gradient(180deg,rgba(255,153,51,.25),rgba(255,255,255,.07) 48%,rgba(19,136,8,.24))}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.07) 50%,transparent 80%);transform:translateX(-100%);animation:shine 6s linear infinite}
+@keyframes shine{to{transform:translateX(100%)}}
+.hero-content{position:relative;z-index:5;padding:20px}
+.flag-line{width:min(700px,82vw);height:7px;margin:0 auto 24px;border-radius:100px;background:linear-gradient(90deg,var(--saffron) 0 33.33%,#fff 33.33% 66.66%,var(--green) 66.66%);box-shadow:0 0 18px rgba(255,153,51,.28),0 0 28px rgba(19,136,8,.22)}
+.hero h1{font-size:clamp(40px,7vw,104px);line-height:.94;font-weight:1000;letter-spacing:-4px;background:linear-gradient(90deg,#ff9933,#ffd19a 25%,#fff 50%,#c8f4c2 75%,#138808);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 5px 14px rgba(0,0,0,.55));animation:titlePulse 3s ease-in-out infinite;cursor:pointer;user-select:none}
+@keyframes titlePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.018)}}
+.date{margin-top:20px;font-size:clamp(19px,3vw,35px);font-weight:950;letter-spacing:4px;text-shadow:0 0 10px rgba(255,255,255,.65)}
+.subtitle{margin-top:10px;font-size:clamp(11px,1.4vw,17px);font-weight:750;letter-spacing:3px;opacity:.75}
+.chakra-bg{position:absolute;width:230px;height:230px;right:-65px;top:50%;transform:translateY(-50%);border:3px solid rgba(255,255,255,.1);border-radius:50%;opacity:.55;display:grid;place-items:center;font-size:190px;color:rgba(255,255,255,.07);animation:rotateChakra 25s linear infinite}
+@keyframes rotateChakra{to{transform:translateY(-50%) rotate(360deg)}}
+.controls{height:50%;min-height:280px;position:relative;z-index:10;padding:clamp(13px,2.5vw,28px) clamp(14px,4vw,60px) 18px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border-top:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column}
+.control-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+.control-header h2{font-size:clamp(18px,2vw,28px);font-weight:950;letter-spacing:1px}.control-header h2 span{color:var(--saffron)}
+.like-box{display:flex;align-items:center;gap:9px}
+.like-btn{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.07);color:#fff;border-radius:100px;padding:9px 16px;font-size:15px;font-weight:900;cursor:pointer;transition:.2s;backdrop-filter:blur(10px)}
+.like-btn:hover{transform:translateY(-2px) scale(1.03);background:rgba(255,255,255,.13)}
+.like-btn.liked{background:rgba(255,55,95,.18);border-color:rgba(255,80,110,.45)}
+#likeCount{min-width:28px;text-align:center;font-weight:1000;color:#ff6b87}
+.elements{flex:1;min-height:0;overflow:auto;display:grid;grid-template-columns:1fr 1fr;gap:11px;scrollbar-width:thin}
+.effect-column{display:flex;flex-direction:column;gap:9px}
+.effect-btn{flex:1;min-height:40px;border:1px solid rgba(255,255,255,.11);border-radius:13px;color:#fff;font-size:clamp(12px,1.5vw,16px);font-weight:900;cursor:pointer;background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.025));box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 5px 15px rgba(0,0,0,.12);transition:transform .18s cubic-bezier(.34,1.56,.64,1),border-color .18s,box-shadow .18s,background .25s;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;line-height:1.15;padding:4px 8px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.effect-btn:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 25%,rgba(255,255,255,.12),transparent 75%);transform:translateX(-120%);transition:.5s}
+.effect-btn:hover:after{transform:translateX(120%)}.effect-btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3);box-shadow:0 8px 25px rgba(0,0,0,.25)}.effect-btn:active{transform:scale(.94)}
+.effect-btn:focus-visible{outline:2px solid rgba(255,255,255,.65);outline-offset:2px}
+.effect-btn .fx-icon{font-size:1.35em;line-height:1;filter:drop-shadow(0 2px 4px rgba(0,0,0,.35))}
+.effect-btn .fx-label{font-size:.76em;font-weight:800;letter-spacing:.2px;opacity:.92;white-space:nowrap}
+.effect-btn.active{border-color:rgba(255,255,255,.55);box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 8px 22px rgba(0,0,0,.3),0 0 18px rgba(255,255,255,.12);transform:translateY(-1px)}
+.effect-btn.active .fx-label{opacity:1}
+.saffron{background:linear-gradient(135deg,rgba(255,153,51,.25),rgba(255,153,51,.06))}.green{background:linear-gradient(135deg,rgba(19,136,8,.25),rgba(19,136,8,.06))}.blue{background:linear-gradient(135deg,rgba(0,0,128,.3),rgba(0,0,128,.08))}.white{background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.03))}
+.like-btn{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+@media(prefers-reduced-motion:reduce){.hero:before,.hero h1,.chakra-bg{animation:none!important}.effect-btn,.like-btn{transition:none!important}}
+#webglCanvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+.message{position:fixed;left:50%;top:51%;transform:translate(-50%,-50%) scale(.82);z-index:100;max-width:90vw;padding:13px 22px;border-radius:100px;background:rgba(5,15,25,.8);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(15px);font-size:clamp(13px,2vw,21px);font-weight:950;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;text-align:center}
+.message.show{opacity:1;transform:translate(-50%,-50%) scale(1)}
+@media(max-width:600px){.hero{min-height:260px}.hero h1{letter-spacing:-2px}.chakra-bg{width:140px;height:140px;right:-55px;font-size:115px}.controls{padding:12px}.control-header{margin-bottom:8px}.effect-btn{min-height:38px;border-radius:10px}.like-btn{padding:7px 11px}}
+
+</style>
+</head>
+<body>
+<div class="app">
+  <section class="hero">
+    <div class="chakra-bg">☸</div>
+    <div class="hero-content">
+      <div class="flag-line"></div>
+      <h1 id="mainTitle">HAPPY<br>INDEPENDENCE DAY</h1>
+      <div class="date">AUGUST 15TH, 2026</div>
+      <div class="subtitle">CELEBRATING FREEDOM • UNITY • PRIDE 🇮🇳</div>
+    </div>
+  </section>
+
+  <section class="controls">
+    <div class="control-header">
+      <h2><span>✦</span> Elements</h2>
+      <div class="like-box">
+        <button class="like-btn" id="likeButton" type="button">❤️ Like</button>
+        <span id="likeCount">0</span>
+      </div>
+    </div>
+
+    <div class="elements" role="group" aria-label="Visual effects">
+      <div class="effect-column">
+        <button class="effect-btn saffron" data-effect="tricolor" aria-label="Tricolor Rain effect" aria-pressed="false"><span class="fx-icon">🇮🇳</span><span class="fx-label">Tricolor Rain</span></button>
+        <button class="effect-btn" data-effect="greeting" aria-label="Greeting Burst effect" aria-pressed="false"><span class="fx-icon">🎉</span><span class="fx-label">Greeting Burst</span></button>
+        <button class="effect-btn green" data-effect="flowers" aria-label="Petal Fall effect" aria-pressed="false"><span class="fx-icon">🌸</span><span class="fx-label">Petal Fall</span></button>
+        <button class="effect-btn" data-effect="hearts" aria-label="Heart Fountain effect" aria-pressed="false"><span class="fx-icon">❤️</span><span class="fx-label">Heart Fountain</span></button>
+        <button class="effect-btn blue" data-effect="stars" aria-label="Starfall effect" aria-pressed="false"><span class="fx-icon">⭐</span><span class="fx-label">Starfall</span></button>
+        <button class="effect-btn saffron" data-effect="sparkle" aria-label="Sparkle Blast effect" aria-pressed="false"><span class="fx-icon">✨</span><span class="fx-label">Sparkle Blast</span></button>
+      </div>
+      <div class="effect-column">
+        <button class="effect-btn green" data-effect="flag" aria-label="Flag Shower effect" aria-pressed="false"><span class="fx-icon">🚩</span><span class="fx-label">Flag Shower</span></button>
+        <button class="effect-btn white" data-effect="confetti" aria-label="Confetti Party effect" aria-pressed="false"><span class="fx-icon">🎊</span><span class="fx-label">Confetti Party</span></button>
+        <button class="effect-btn blue" data-effect="chakra" aria-label="Chakra Spin effect" aria-pressed="false"><span class="fx-icon">☸️</span><span class="fx-label">Chakra Spin</span></button>
+        <button class="effect-btn saffron" data-effect="fireworks" aria-label="Fireworks Show effect" aria-pressed="false"><span class="fx-icon">🎆</span><span class="fx-label">Fireworks Show</span></button>
+        <button class="effect-btn green" data-effect="unity" aria-label="Unity Converge effect" aria-pressed="false"><span class="fx-icon">🤝</span><span class="fx-label">Unity Converge</span></button>
+        <button class="effect-btn white" data-effect="freedom" aria-label="Freedom Rise effect" aria-pressed="false"><span class="fx-icon">🕊️</span><span class="fx-label">Freedom Rise</span></button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<canvas id="webglCanvas"></canvas>
+<div class="message" id="message"></div>
+
+<script>
+/* ============================================================
+   HAPPY INDEPENDENCE DAY — 15 AUGUST 2026
+   WebGL GPU Particle Engine
+   ============================================================ */
+
+const canvas = document.getElementById("webglCanvas");
+
+const gl = canvas.getContext("webgl", {
+    alpha: true,
+    antialias: false,
+    depth: false,
+    stencil: false,
+    preserveDrawingBuffer: false
+});
+
+if (!gl) {
+    alert(
+        "WebGL is not available. Please use a modern browser with hardware acceleration enabled."
+    );
+}
+
+/* ============================================================
+   GLOBAL STATE
+============================================================ */
+
+const MAX_PARTICLES = 700;
+
+let particles = [];
+let effectID = 0;
+let activeTimers = [];
+let messageTimer = null;
+
+const W = () => window.innerWidth;
+const H = () => window.innerHeight;
+
+
+/* ============================================================
+   CANVAS / DEVICE PIXEL RATIO
+============================================================ */
+
+function resizeCanvas() {
+
+    const dpr = Math.min(
+        window.devicePixelRatio || 1,
+        1.5
+    );
+
+    canvas.width =
+        Math.floor(W() * dpr);
+
+    canvas.height =
+        Math.floor(H() * dpr);
+
+    canvas.style.width =
+        W() + "px";
+
+    canvas.style.height =
+        H() + "px";
+
+    gl.viewport(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+}
+
+resizeCanvas();
+
+let resizeQueued = false;
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        if (resizeQueued) return;
+
+        resizeQueued = true;
+
+        requestAnimationFrame(() => {
+            resizeCanvas();
+            resizeQueued = false;
+        });
+    }
+);
+
+
+/* ============================================================
+   WEBGL SHADERS
+============================================================ */
+
+const vertexShaderSource = `
+attribute vec2 a_position;
+attribute float a_size;
+attribute vec4 a_color;
+
+uniform vec2 u_resolution;
+
+varying vec4 v_color;
+
+void main() {
+
+    vec2 zeroToOne =
+        a_position / u_resolution;
+
+    vec2 clipSpace =
+        zeroToOne * 2.0 - 1.0;
+
+    gl_Position =
+        vec4(
+            clipSpace * vec2(1.0, -1.0),
+            0.0,
+            1.0
+        );
+
+    gl_PointSize =
+        a_size;
+
+    v_color =
+        a_color;
+}
+`;
+
+const fragmentShaderSource = `
+precision mediump float;
+
+varying vec4 v_color;
+
+void main() {
+
+    vec2 p =
+        gl_PointCoord -
+        vec2(0.5);
+
+    float distanceFromCenter =
+        dot(p, p);
+
+    if (
+        distanceFromCenter >
+        0.25
+    ) {
+        discard;
+    }
+
+    gl_FragColor =
+        v_color;
+}
+`;
+
+
+/* ============================================================
+   SHADER HELPERS
+============================================================ */
+
+function createShader(
+    type,
+    source
+) {
+
+    const shader =
+        gl.createShader(type);
+
+    gl.shaderSource(
+        shader,
+        source
+    );
+
+    gl.compileShader(shader);
+
+    if (
+        !gl.getShaderParameter(
+            shader,
+            gl.COMPILE_STATUS
+        )
+    ) {
+
+        console.error(
+            gl.getShaderInfoLog(shader)
+        );
+
+        gl.deleteShader(shader);
+
+        return null;
+    }
+
+    return shader;
+}
+
+
+function createProgram(
+    vertexSource,
+    fragmentSource
+) {
+
+    const vertexShader =
+        createShader(
+            gl.VERTEX_SHADER,
+            vertexSource
+        );
+
+    const fragmentShader =
+        createShader(
+            gl.FRAGMENT_SHADER,
+            fragmentSource
+        );
+
+    const program =
+        gl.createProgram();
+
+    gl.attachShader(
+        program,
+        vertexShader
+    );
+
+    gl.attachShader(
+        program,
+        fragmentShader
+    );
+
+    gl.linkProgram(program);
+
+    if (
+        !gl.getProgramParameter(
+            program,
+            gl.LINK_STATUS
+        )
+    ) {
+
+        console.error(
+            gl.getProgramInfoLog(program)
+        );
+
+        return null;
+    }
+
+    return program;
+}
+
+
+const program =
+    createProgram(
+        vertexShaderSource,
+        fragmentShaderSource
+    );
+
+gl.useProgram(program);
+
+
+/* ============================================================
+   WEBGL LOCATIONS
+============================================================ */
+
+const positionLocation =
+    gl.getAttribLocation(
+        program,
+        "a_position"
+    );
+
+const sizeLocation =
+    gl.getAttribLocation(
+        program,
+        "a_size"
+    );
+
+const colorLocation =
+    gl.getAttribLocation(
+        program,
+        "a_color"
+    );
+
+const resolutionLocation =
+    gl.getUniformLocation(
+        program,
+        "u_resolution"
+    );
+
+
+/* ============================================================
+   GPU BUFFERS
+============================================================ */
+
+const positionBuffer =
+    gl.createBuffer();
+
+const sizeBuffer =
+    gl.createBuffer();
+
+const colorBuffer =
+    gl.createBuffer();
+
+
+/* ============================================================
+   COLOR CONVERSION
+============================================================ */
+
+function hexToRGBA(
+    hex,
+    alpha = 1
+) {
+
+    const value =
+        parseInt(
+            hex.replace("#", ""),
+            16
+        );
+
+    return [
+
+        ((value >> 16) & 255) / 255,
+
+        ((value >> 8) & 255) / 255,
+
+        (value & 255) / 255,
+
+        alpha
+    ];
+}
+
+
+/* ============================================================
+   COLOR PALETTES
+============================================================ */
+
+const palettes = {
+
+    tricolor: [
+        "#ff9933",
+        "#ffffff",
+        "#138808"
+    ],
+
+    gold: [
+        "#ffd700",
+        "#ffffff",
+        "#ff9933"
+    ],
+
+    heart: [
+        "#ff3355",
+        "#ff7090",
+        "#ffffff",
+        "#138808"
+    ],
+
+    blue: [
+        "#000080",
+        "#ffffff",
+        "#ff9933"
+    ],
+
+    confetti: [
+        "#ff9933",
+        "#ffffff",
+        "#138808",
+        "#000080",
+        "#ffd700"
+    ],
+
+    freedom: [
+        "#ffffff",
+        "#ff9933",
+        "#138808"
+    ]
+};
+
+
+function randomItem(array) {
+
+    return array[
+        Math.floor(
+            Math.random() *
+            array.length
+        )
+    ];
+}
+
+
+/* ============================================================
+   EFFECT MANAGEMENT
+============================================================ */
+
+function stopCurrentEffect() {
+
+    /*
+        Incrementing this ID instantly invalidates
+        every old effect loop.
+    */
+
+    effectID++;
+
+    /*
+        Cancel all timers.
+    */
+
+    activeTimers.forEach(
+        timer => {
+            clearInterval(timer);
+            clearTimeout(timer);
+        }
+    );
+
+    activeTimers = [];
+
+    /*
+        Remove all particles immediately.
+    */
+
+    particles.length = 0;
+
+    /*
+        Clear GPU canvas.
+    */
+
+    gl.clearColor(
+        0,
+        0,
+        0,
+        0
+    );
+
+    gl.clear(
+        gl.COLOR_BUFFER_BIT
+    );
+}
+
+
+function registerTimer(timer) {
+
+    activeTimers.push(timer);
+
+    return timer;
+}
+
+
+/* ============================================================
+   PARTICLE CREATION
+============================================================ */
+
+function addParticle(
+    particle
+) {
+
+    if (
+        particles.length >=
+        MAX_PARTICLES
+    ) {
+
+        return;
+    }
+
+    particles.push(
+        particle
+    );
+}
+
+
+function createParticle({
+    x,
+    y,
+    color,
+    size,
+    vx,
+    vy,
+    life = 160,
+    gravity = 0.01
+}) {
+
+    addParticle({
+
+        x,
+        y,
+
+        color,
+
+        size,
+
+        vx,
+        vy,
+
+        life,
+
+        maxLife: life,
+
+        gravity
+    });
+}
+
+
+/* ============================================================
+   GPU RENDER LOOP
+============================================================ */
+
+function render() {
+
+    const width =
+        W();
+
+    const height =
+        H();
+
+
+    gl.clearColor(
+        0,
+        0,
+        0,
+        0
+    );
+
+    gl.clear(
+        gl.COLOR_BUFFER_BIT
+    );
+
+
+    /*
+        Remove dead/off-screen particles
+        before sending data to GPU.
+    */
+
+    for (
+        let i =
+            particles.length - 1;
+
+        i >= 0;
+
+        i--
+    ) {
+
+        const p =
+            particles[i];
+
+
+        p.x +=
+            p.vx +
+            (p.sway
+                ? Math.sin(p.life * (p.swaySpeed || 0.08) + (p.phase || 0)) * p.sway
+                : 0);
+
+        p.y +=
+            p.vy;
+
+        p.vy +=
+            p.gravity;
+
+        p.life--;
+
+
+        if (
+
+            p.life <= 0 ||
+
+            p.y >
+                height + 100 ||
+
+            p.x <
+                -100 ||
+
+            p.x >
+                width + 100
+
+        ) {
+
+            particles.splice(
+                i,
+                1
+            );
+        }
+    }
+
+
+    if (
+        particles.length === 0
+    ) {
+
+        requestAnimationFrame(
+            render
+        );
+
+        return;
+    }
+
+
+    /*
+        Build GPU arrays.
+    */
+
+    const positions =
+        new Float32Array(
+            particles.length * 2
+        );
+
+    const sizes =
+        new Float32Array(
+            particles.length
+        );
+
+    const colors =
+        new Float32Array(
+            particles.length * 4
+        );
+
+
+    for (
+        let i = 0;
+
+        i < particles.length;
+
+        i++
+    ) {
+
+        const p =
+            particles[i];
+
+
+        positions[
+            i * 2
+        ] = p.x;
+
+        positions[
+            i * 2 + 1
+        ] = p.y;
+
+
+        sizes[i] =
+            p.size;
+
+
+        const alpha =
+            Math.max(
+                0,
+                Math.min(
+                    1,
+                    p.life /
+                    p.maxLife
+                )
+            );
+
+
+        colors.set(
+            [
+                p.color[0],
+                p.color[1],
+                p.color[2],
+                alpha
+            ],
+            i * 4
+        );
+    }
+
+
+    /*
+        Use shader program.
+    */
+
+    gl.useProgram(
+        program
+    );
+
+
+    gl.uniform2f(
+        resolutionLocation,
+        width,
+        height
+    );
+
+
+    /*
+        Position buffer.
+    */
+
+    gl.bindBuffer(
+        gl.ARRAY_BUFFER,
+        positionBuffer
+    );
+
+    gl.bufferData(
+        gl.ARRAY_BUFFER,
+        positions,
+        gl.DYNAMIC_DRAW
+    );
+
+    gl.enableVertexAttribArray(
+        positionLocation
+    );
+
+    gl.vertexAttribPointer(
+        positionLocation,
+        2,
+        gl.FLOAT,
+        false,
+        0,
+        0
+    );
+
+
+    /*
+        Size buffer.
+    */
+
+    gl.bindBuffer(
+        gl.ARRAY_BUFFER,
+        sizeBuffer
+    );
+
+    gl.bufferData(
+        gl.ARRAY_BUFFER,
+        sizes,
+        gl.DYNAMIC_DRAW
+    );
+
+    gl.enableVertexAttribArray(
+        sizeLocation
+    );
+
+    gl.vertexAttribPointer(
+        sizeLocation,
+        1,
+        gl.FLOAT,
+        false,
+        0,
+        0
+    );
+
+
+    /*
+        Color buffer.
+    */
+
+    gl.bindBuffer(
+        gl.ARRAY_BUFFER,
+        colorBuffer
+    );
+
+    gl.bufferData(
+        gl.ARRAY_BUFFER,
+        colors,
+        gl.DYNAMIC_DRAW
+    );
+
+    gl.enableVertexAttribArray(
+        colorLocation
+    );
+
+    gl.vertexAttribPointer(
+        colorLocation,
+        4,
+        gl.FLOAT,
+        false,
+        0,
+        0
+    );
+
+
+    /*
+        Transparent particle blending.
+    */
+
+    gl.enable(
+        gl.BLEND
+    );
+
+    gl.blendFunc(
+        gl.SRC_ALPHA,
+        gl.ONE_MINUS_SRC_ALPHA
+    );
+
+
+    /*
+        One GPU draw call for the
+        entire particle set.
+    */
+
+    gl.drawArrays(
+        gl.POINTS,
+        0,
+        particles.length
+    );
+
+
+    requestAnimationFrame(
+        render
+    );
+}
+
+requestAnimationFrame(
+    render
+);
+
+
+/* ============================================================
+   MESSAGE
+============================================================ */
+
+function showMessage(
+    text
+) {
+
+    const message =
+        document.getElementById(
+            "message"
+        );
+
+
+    if (messageTimer) {
+
+        clearTimeout(
+            messageTimer
+        );
+    }
+
+
+    message.classList.remove(
+        "show"
+    );
+
+    /*
+        Force a clean transition.
+    */
+
+    void message.offsetWidth;
+
+
+    message.textContent =
+        text;
+
+    message.classList.add(
+        "show"
+    );
+
+
+    messageTimer =
+        setTimeout(
+            () => {
+
+                message.classList.remove(
+                    "show"
+                );
+
+            },
+            1300
+        );
+}
+
+
+/* ============================================================
+   RAIN EFFECT
+============================================================ */
+
+function rain(
+    colors,
+    currentEffectID,
+    duration = 3200,
+    density = 5
+) {
+
+    const start =
+        performance.now();
+
+
+    const timer =
+        registerTimer(
+
+            setInterval(
+                () => {
+
+                    /*
+                        New button clicked:
+                        immediately stop this effect.
+                    */
+
+                    if (
+                        currentEffectID !==
+                        effectID
+                    ) {
+
+                        clearInterval(
+                            timer
+                        );
+
+                        return;
+                    }
+
+
+                    /*
+                        Stop particle generation
+                        after the effect duration.
+                    */
+
+                    if (
+                        performance.now() -
+                        start >
+                        duration
+                    ) {
+
+                        clearInterval(
+                            timer
+                        );
+
+                        return;
+                    }
+
+
+                    /*
+                        Controlled particle
+                        generation.
+                    */
+
+                    for (
+                        let i = 0;
+
+                        i < density;
+
+                        i++
+                    ) {
+
+                        if (
+                            particles.length >=
+                            MAX_PARTICLES
+                        ) {
+
+                            break;
+                        }
+
+
+                        createParticle({
+
+                            x:
+                                Math.random() *
+                                W(),
+
+                            y:
+                                -20,
+
+                            color:
+                                hexToRGBA(
+                                    randomItem(
+                                        colors
+                                    )
+                                ),
+
+                            size:
+                                6 +
+                                Math.random() *
+                                10,
+
+                            vx:
+                                (
+                                    Math.random() -
+                                    0.5
+                                ) * 0.8,
+
+                            vy:
+                                1.2 +
+                                Math.random() *
+                                1.8,
+
+                            life:
+                                150 +
+                                Math.random() *
+                                80,
+
+                            gravity:
+                                0.008
+                        });
+                    }
+
+                },
+
+                45
+            )
+        );
+}
+
+
+/* ============================================================
+   FLAG SHOWER
+============================================================ */
+
+function flagRain(
+    currentEffectID
+) {
+
+    const start =
+        performance.now();
+
+
+    const timer =
+        registerTimer(
+
+            setInterval(
+                () => {
+
+                    if (
+                        currentEffectID !==
+                        effectID
+                    ) {
+
+                        clearInterval(
+                            timer
+                        );
+
+                        return;
+                    }
+
+
+                    if (
+                        performance.now() -
+                        start >
+                        3200
+                    ) {
+
+                        clearInterval(
+                            timer
+                        );
+
+                        return;
+                    }
+
+
+                    /*
+                        Flags are represented by
+                        lightweight tricolor particles.
+                        This is considerably cheaper than
+                        repeatedly drawing emoji glyphs.
+                    */
+
+                    for (
+                        let i = 0;
+
+                        i < 3;
+
+                        i++
+                    ) {
+
+                        if (
+                            particles.length >=
+                            MAX_PARTICLES
+                        ) {
+
+                            break;
+                        }
+
+
+                        createParticle({
+
+                            x:
+                                Math.random() *
+                                W(),
+
+                            y:
+                                -15,
+
+                            color:
+                                hexToRGBA(
+                                    randomItem(
+                                        palettes.tricolor
+                                    )
+                                ),
+
+                            size:
+                                8 +
+                                Math.random() *
+                                8,
+
+                            vx:
+                                (
+                                    Math.random() -
+                                    0.5
+                                ) * 0.45,
+
+                            vy:
+                                1.0 +
+                                Math.random() *
+                                1.4,
+
+                            life:
+                                170,
+
+                            gravity:
+                                0.005
+                        });
+                    }
+
+                },
+
+                55
+            )
+        );
+}
+
+
+/* ============================================================
+   EXPLOSION / BURST
+============================================================ */
+
+function burst(
+    colors,
+    currentEffectID,
+    count = 160
+) {
+
+    if (
+        currentEffectID !==
+        effectID
+    ) {
+
+        return;
+    }
+
+
+    const centerX =
+        W() / 2;
+
+    const centerY =
+        H() * 0.42;
+
+
+    count =
+        Math.min(
+            count,
+            MAX_PARTICLES
+        );
+
+
+    for (
+        let i = 0;
+
+        i < count;
+
+        i++
+    ) {
+
+        if (
+            particles.length >=
+            MAX_PARTICLES
+        ) {
+
+            break;
+        }
+
+
+        const angle =
+            Math.random() *
+            Math.PI *
+            2;
+
+        const speed =
+            1.8 +
+            Math.random() *
+            5.5;
+
+
+        createParticle({
+
+            x:
+                centerX,
+
+            y:
+                centerY,
+
+            color:
+                hexToRGBA(
+                    randomItem(
+                        colors
+                    )
+                ),
+
+            size:
+                5 +
+                Math.random() *
+                9,
+
+            vx:
+                Math.cos(angle) *
+                speed,
+
+            vy:
+                Math.sin(angle) *
+                speed,
+
+            life:
+                75 +
+                Math.random() *
+                70,
+
+            gravity:
+                0.035
+        });
+    }
+}
+
+
+/* ============================================================
+   FIREWORKS
+============================================================ */
+
+function fireworks(
+    currentEffectID
+) {
+
+    let burstCount = 0;
+
+
+    const timer =
+        registerTimer(
+
+            setInterval(
+                () => {
+
+                    if (
+                        currentEffectID !==
+                        effectID
+                    ) {
+
+                        clearInterval(
+                            timer
+                        );
+
+                        return;
+                    }
+
+
+                    if (
+                        particles.length >
+                        MAX_PARTICLES - 60
+                    ) {
+
+                        return;
+                    }
+
+
+                    const x =
+                        70 +
+                        Math.random() *
+                        Math.max(
+                            100,
+                            W() - 140
+                        );
+
+
+                    const y =
+                        80 +
+                        Math.random() *
+                        H() *
+                        0.36;
+
+
+                    for (
+                        let i = 0;
+
+                        i < 55;
+
+                        i++
+                    ) {
+
+                        if (
+                            particles.length >=
+                            MAX_PARTICLES
+                        ) {
+
+                            break;
+                        }
+
+
+                        const angle =
+                            Math.random() *
+                            Math.PI *
+                            2;
+
+                        const speed =
+                            1.5 +
+                            Math.random() *
+                            4.8;
+
+
+                        createParticle({
+
+                            x,
+
+                            y,
+
+                            color:
+                                hexToRGBA(
+                                    randomItem(
+                                        palettes.confetti
+                                    )
+                                ),
+
+                            size:
+                                5 +
+                                Math.random() *
+                                8,
+
+                            vx:
+                                Math.cos(angle) *
+                                speed,
+
+                            vy:
+                                Math.sin(angle) *
+                                speed,
+
+                            life:
+                                70 +
+                                Math.random() *
+                                60,
+
+                            gravity:
+                                0.035
+                        });
+                    }
+
+
+                    burstCount++;
+
+
+                    if (
+                        burstCount >= 7
+                    ) {
+
+                        clearInterval(
+                            timer
+                        );
+                    }
+
+                },
+
+                520
+            )
+        );
+}
+
+
+/* ============================================================
+   RING BURST — even ring of particles expanding outward
+   (used for "Greeting Burst")
+============================================================ */
+
+function ringBurst(colors, currentEffectID, count = 90) {
+
+    if (currentEffectID !== effectID) return;
+
+    const centerX = W() / 2;
+    const centerY = H() * 0.4;
+    count = Math.min(count, MAX_PARTICLES);
+
+    for (let i = 0; i < count; i++) {
+
+        if (particles.length >= MAX_PARTICLES) break;
+
+        const angle = (i / count) * Math.PI * 2;
+        const speed = 2.6 + Math.random() * 1.4;
+
+        createParticle({
+            x: centerX,
+            y: centerY,
+            color: hexToRGBA(randomItem(colors)),
+            size: 6 + Math.random() * 6,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            life: 95 + Math.random() * 35,
+            gravity: 0.02
+        });
+    }
+
+    /* second, slightly delayed ring for a "pulse" feel */
+    registerTimer(setTimeout(() => {
+
+        if (currentEffectID !== effectID) return;
+
+        for (let i = 0; i < count * 0.7; i++) {
+
+            if (particles.length >= MAX_PARTICLES) break;
+
+            const angle = (i / (count * 0.7)) * Math.PI * 2;
+            const speed = 3.4 + Math.random() * 1.6;
+
+            createParticle({
+                x: centerX,
+                y: centerY,
+                color: hexToRGBA(randomItem(colors)),
+                size: 5 + Math.random() * 5,
+                vx: Math.cos(angle) * speed,
+                vy: Math.sin(angle) * speed,
+                life: 80 + Math.random() * 30,
+                gravity: 0.025
+            });
+        }
+
+    }, 260));
+}
+
+
+/* ============================================================
+   PETAL FALL — gentle swaying descent
+   (used for "Petal Fall")
+============================================================ */
+
+function petalFall(colors, currentEffectID, duration = 3400, density = 4) {
+
+    const start = performance.now();
+
+    const timer = registerTimer(setInterval(() => {
+
+        if (currentEffectID !== effectID) { clearInterval(timer); return; }
+        if (performance.now() - start > duration) { clearInterval(timer); return; }
+
+        for (let i = 0; i < density; i++) {
+
+            if (particles.length >= MAX_PARTICLES) break;
+
+            createParticle({
+                x: Math.random() * W(),
+                y: -20,
+                color: hexToRGBA(randomItem(colors)),
+                size: 7 + Math.random() * 9,
+                vx: 0,
+                vy: 0.5 + Math.random() * 0.7,
+                life: 220 + Math.random() * 90,
+                gravity: 0.002
+            });
+
+            const p = particles[particles.length - 1];
+            if (p) {
+                p.sway = 0.7 + Math.random() * 1.1;
+                p.swaySpeed = 0.05 + Math.random() * 0.05;
+                p.phase = Math.random() * Math.PI * 2;
+            }
+        }
+
+    }, 70));
+}
+
+
+/* ============================================================
+   FOUNTAIN — particles launched up from the bottom, arcing back
+   (used for "Heart Fountain")
+============================================================ */
+
+function fountain(colors, currentEffectID, duration = 2600, density = 5) {
+
+    const start = performance.now();
+    const baseX = W() / 2;
+    const baseY = H() * 0.92;
+
+    const timer = registerTimer(setInterval(() => {
+
+        if (currentEffectID !== effectID) { clearInterval(timer); return; }
+        if (performance.now() - start > duration) { clearInterval(timer); return; }
+
+        for (let i = 0; i < density; i++) {
+
+            if (particles.length >= MAX_PARTICLES) break;
+
+            createParticle({
+                x: baseX + (Math.random() - 0.5) * 90,
+                y: baseY,
+                color: hexToRGBA(randomItem(colors)),
+                size: 6 + Math.random() * 9,
+                vx: (Math.random() - 0.5) * 3.2,
+                vy: -(5.5 + Math.random() * 3.5),
+                life: 90 + Math.random() * 50,
+                gravity: 0.09
+            });
+        }
+
+    }, 60));
+}
+
+
+/* ============================================================
+   CHAKRA WHEEL — particles seeded around a ring, spinning outward
+   like spokes of the Ashoka Chakra
+   (used for "Chakra Spin")
+============================================================ */
+
+function chakraWheel(colors, currentEffectID, spokes = 24) {
+
+    if (currentEffectID !== effectID) return;
+
+    const centerX = W() / 2;
+    const centerY = H() * 0.4;
+    const startRadius = 6;
+    const tilt = Math.random() * Math.PI * 2;
+
+    for (let s = 0; s < spokes; s++) {
+
+        const angle = (s / spokes) * Math.PI * 2 + tilt;
+
+        /* several beads along each spoke, moving outward */
+        for (let b = 0; b < 5; b++) {
+
+            if (particles.length >= MAX_PARTICLES) break;
+
+            const delay = b * 0.5;
+
+            registerTimer(setTimeout(() => {
+
+                if (currentEffectID !== effectID) return;
+                if (particles.length >= MAX_PARTICLES) return;
+
+                const speed = 2.0 + b * 0.55;
+
+                createParticle({
+                    x: centerX + Math.cos(angle) * startRadius,
+                    y: centerY + Math.sin(angle) * startRadius,
+                    color: hexToRGBA(randomItem(colors)),
+                    size: 5 + Math.random() * 5,
+                    vx: Math.cos(angle + 0.35) * speed,
+                    vy: Math.sin(angle + 0.35) * speed,
+                    life: 70 + Math.random() * 40,
+                    gravity: 0.015
+                });
+
+            }, delay * 90));
+        }
+    }
+}
+
+
+/* ============================================================
+   UNITY CONVERGE — streams from both edges meet in the middle
+   (used for "Unity Converge")
+============================================================ */
+
+function unityConverge(colors, currentEffectID, duration = 3000, density = 5) {
+
+    const start = performance.now();
+    const centerX = W() / 2;
+
+    const timer = registerTimer(setInterval(() => {
+
+        if (currentEffectID !== effectID) { clearInterval(timer); return; }
+        if (performance.now() - start > duration) { clearInterval(timer); return; }
+
+        for (let i = 0; i < density; i++) {
+
+            if (particles.length >= MAX_PARTICLES) break;
+
+            const fromLeft = i % 2 === 0;
+            const y = H() * 0.25 + Math.random() * H() * 0.4;
+
+            createParticle({
+                x: fromLeft ? -20 : W() + 20,
+                y,
+                color: hexToRGBA(randomItem(colors)),
+                size: 6 + Math.random() * 7,
+                vx: fromLeft
+                    ? 3.0 + Math.random() * 1.6
+                    : -(3.0 + Math.random() * 1.6),
+                vy: -0.4 + Math.random() * 0.8,
+                life: 130 + Math.random() * 40,
+                gravity: 0.03
+            });
+        }
+
+    }, 55));
+}
+
+
+/* ============================================================
+   FREEDOM RISE — particles float gently upward and fade,
+   like doves or lanterns released into the sky
+   (used for "Freedom Rise")
+============================================================ */
+
+function freedomRise(colors, currentEffectID, duration = 3400, density = 4) {
+
+    const start = performance.now();
+
+    const timer = registerTimer(setInterval(() => {
+
+        if (currentEffectID !== effectID) { clearInterval(timer); return; }
+        if (performance.now() - start > duration) { clearInterval(timer); return; }
+
+        for (let i = 0; i < density; i++) {
+
+            if (particles.length >= MAX_PARTICLES) break;
+
+            createParticle({
+                x: Math.random() * W(),
+                y: H() + 20,
+                color: hexToRGBA(randomItem(colors)),
+                size: 6 + Math.random() * 8,
+                vx: 0,
+                vy: -(1.0 + Math.random() * 1.1),
+                life: 200 + Math.random() * 90,
+                gravity: -0.004
+            });
+
+            const p = particles[particles.length - 1];
+            if (p) {
+                p.sway = 0.5 + Math.random() * 0.8;
+                p.swaySpeed = 0.04 + Math.random() * 0.04;
+                p.phase = Math.random() * Math.PI * 2;
+            }
+        }
+
+    }, 75));
+}
+
+
+/* ============================================================
+   EFFECT CONTROLLER
+============================================================ */
+
+function runEffect(
+    type
+) {
+
+    /*
+        Critical:
+        remove the old effect BEFORE
+        starting the new one.
+    */
+
+    stopCurrentEffect();
+
+
+    const currentEffectID =
+        effectID;
+
+
+    switch(type) {
+
+        case "tricolor":
+
+            showMessage(
+                "🇮🇳 Jai Hind! 🇮🇳"
+            );
+
+            rain(
+                palettes.tricolor,
+                currentEffectID,
+                3200,
+                6
+            );
+
+            break;
+
+
+        case "greeting":
+
+            showMessage(
+                "🎉 Happy Independence Day! 🎉"
+            );
+
+            ringBurst(
+                palettes.gold,
+                currentEffectID,
+                90
+            );
+
+            break;
+
+
+        case "flowers":
+
+            showMessage(
+                "🌸 Greetings of peace & joy 🌸"
+            );
+
+            petalFall(
+                [
+                    "#ff9933",
+                    "#ffffff",
+                    "#138808",
+                    "#ffb6c1"
+                ],
+                currentEffectID,
+                3400,
+                4
+            );
+
+            break;
+
+
+        case "hearts":
+
+            showMessage(
+                "❤️ India in our hearts ❤️"
+            );
+
+            fountain(
+                palettes.heart,
+                currentEffectID,
+                2600,
+                5
+            );
+
+            break;
+
+
+        case "stars":
+
+            showMessage(
+                "⭐ Freedom shines forever ⭐"
+            );
+
+            rain(
+                palettes.gold,
+                currentEffectID,
+                3200,
+                6
+            );
+
+            break;
+
+
+        case "sparkle":
+
+            showMessage(
+                "✨ Celebration of freedom ✨"
+            );
+
+            burst(
+                palettes.gold,
+                currentEffectID,
+                150
+            );
+
+            break;
+
+
+        case "flag":
+
+            showMessage(
+                "🇮🇳 Proud to be Indian 🇮🇳"
+            );
+
+            flagRain(
+                currentEffectID
+            );
+
+            break;
+
+
+        case "confetti":
+
+            showMessage(
+                "🎊 Let freedom celebrate! 🎊"
+            );
+
+            burst(
+                palettes.confetti,
+                currentEffectID,
+                60
+            );
+
+            rain(
+                palettes.confetti,
+                currentEffectID,
+                3200,
+                8
+            );
+
+            break;
+
+
+        case "chakra":
+
+            showMessage(
+                "☸ Unity • Dharma • Peace ☸"
+            );
+
+            chakraWheel(
+                palettes.blue,
+                currentEffectID,
+                24
+            );
+
+            break;
+
+
+        case "fireworks":
+
+            showMessage(
+                "🎆 Freedom fireworks! 🎆"
+            );
+
+            fireworks(
+                currentEffectID
+            );
+
+            break;
+
+
+        case "unity":
+
+            showMessage(
+                "🤝 Unity in diversity 🤝"
+            );
+
+            unityConverge(
+                palettes.tricolor,
+                currentEffectID,
+                3000,
+                5
+            );
+
+            break;
+
+
+        case "freedom":
+
+            showMessage(
+                "🕊️ Freedom • Peace • India 🕊️"
+            );
+
+            freedomRise(
+                palettes.freedom,
+                currentEffectID,
+                3400,
+                4
+            );
+
+            break;
+    }
+}
+
+
+/* ============================================================
+   EFFECT BUTTONS
+============================================================ */
+
+const effectButtons =
+    document.querySelectorAll(".effect-btn");
+
+function setActiveEffectButton(type) {
+
+    effectButtons.forEach(btn => {
+
+        const isActive =
+            btn.dataset.effect === type;
+
+        btn.classList.toggle("active", isActive);
+
+        btn.setAttribute(
+            "aria-pressed",
+            isActive ? "true" : "false"
+        );
+    });
+}
+
+effectButtons.forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                setActiveEffectButton(
+                    button.dataset.effect
+                );
+
+                runEffect(
+                    button.dataset.effect
+                );
+            }
+        );
+    }
+);
+
+
+/* ============================================================
+   LIKE SYSTEM
+============================================================ */
+
+const likeButton =
+    document.getElementById(
+        "likeButton"
+    );
+
+
+let likes =
+    Number(
+        localStorage.getItem(
+            "independenceDayLikes"
+        )
+    ) || 0;
+
+
+let liked =
+    localStorage.getItem(
+        "independenceDayLiked"
+    ) === "true";
+
+
+function updateLikeUI() {
+
+    document.getElementById(
+        "likeCount"
+    ).textContent =
+        likes;
+
+
+    likeButton.classList.toggle(
+        "liked",
+        liked
+    );
+
+
+    likeButton.textContent =
+        liked
+            ? "💖 Liked"
+            : "❤️ Like";
+}
+
+
+likeButton.addEventListener(
+    "click",
+    () => {
+
+        liked =
+            !liked;
+
+
+        if (liked) {
+
+            likes++;
+
+
+            /*
+                Like animation becomes
+                the only active effect.
+            */
+
+            stopCurrentEffect();
+
+
+            const currentEffectID =
+                effectID;
+
+
+            showMessage(
+                "❤️ Thank you for celebrating! ❤️"
+            );
+
+
+            burst(
+                palettes.heart,
+                currentEffectID,
+                70
+            );
+
+        } else {
+
+            likes =
+                Math.max(
+                    0,
+                    likes - 1
+                );
+        }
+
+
+        localStorage.setItem(
+            "independenceDayLikes",
+            likes
+        );
+
+
+        localStorage.setItem(
+            "independenceDayLiked",
+            liked
+        );
+
+
+        updateLikeUI();
+    }
+);
+
+
+updateLikeUI();
+
+
+/* ============================================================
+   TITLE INTERACTIONS
+============================================================ */
+
+const title =
+    document.getElementById(
+        "mainTitle"
+    );
+
+
+title.addEventListener(
+    "click",
+    () => {
+
+        setActiveEffectButton("tricolor");
+
+        runEffect(
+            "tricolor"
+        );
+    }
+);
+
+
+title.addEventListener(
+    "dblclick",
+    () => {
+
+        setActiveEffectButton("fireworks");
+
+        runEffect(
+            "fireworks"
+        );
+    }
+);
+
+
+/* ============================================================
+   STARTUP
+============================================================ */
+
+setTimeout(
+    () => {
+
+        setActiveEffectButton("tricolor");
+
+        runEffect(
+            "tricolor"
+        );
+
+    },
+    500
+);
+
+</script>
+</body>
+</html>
